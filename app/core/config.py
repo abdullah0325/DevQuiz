@@ -6,7 +6,7 @@ load_dotenv()
 
 class Settings(BaseSettings):
     OPENAI_API_KEY: str=os.environ.get("OPENAI_API_KEY")
-    MODEL_NAME:str=os.environ.get("MODEL_NAME")
+
 
     class Config:
         env_file = ".env"
