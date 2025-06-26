@@ -1,20 +1,16 @@
-from fastapi import FastAPI, Query
-from pydantic import BaseModel
-from typing import List
-from utils import generate_mcqs
+from fastapi import FastAPI
+from app.api.router import api_router
 
-app = FastAPI()
+app = FastAPI(
+    title="Quiz MCQ Generator",
+    version="1.0.0",
+    description="Generate MCQs using OpenAI LLMs"
+)
 
-class MCQResponse(BaseModel):
-    question: str
-    options: List[str]
-    correct_answer: str
 
-@app.get("/", response_model=List[MCQResponse])
-async def mcqs(language: str ):
-    """
-    Generate multiple-choice questions (MCQs) for a given programming language.
-    """
-    return generate_mcqs(language)
-    
+app.include_router(api_router, prefix="/api")
 
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="127.0.0.1", port=5353, reload=True)

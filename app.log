@@ -1,0 +1,9 @@
+2025-06-25 11:42:23,999 - INFO - Generating MCQs for python
+2025-06-25 11:42:37,085 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 11:42:37,367 - INFO - Generated 10 MCQs
+2025-06-25 15:36:01,435 - INFO - Generating MCQs for urdu
+2025-06-25 15:36:14,071 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 15:36:14,393 - INFO - Generated 10 MCQs
+2025-06-25 15:38:53,313 - INFO - Generating MCQs for english
+2025-06-25 15:39:05,390 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 15:39:05,614 - INFO - Generated 10 MCQs
